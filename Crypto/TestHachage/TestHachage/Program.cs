@@ -40,7 +40,7 @@ namespace TestHachage
                 //Choisir un des 16 salt
                 var salt = Encoding.UTF8.GetBytes(listeSalt[pos - 1]);
 
-                var result = KeyDerivation.Pbkdf2(i, salt, KeyDerivationPrf.HMACSHA256, 10001, 60);
+                var result = KeyDerivation.Pbkdf2(hex, salt, KeyDerivationPrf.HMACSHA256, 10001, 60);
 
                 Console.WriteLine(Convert.ToBase64String(result));
             }
